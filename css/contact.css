@@ -1,0 +1,234 @@
+/* Styles spécifiques à la page de contact */
+
+.contact-page {
+    padding: var(--spacing-lg) 0;
+}
+
+.contact-hero {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.contact-hero h1 {
+    color: var(--primary);
+    margin-bottom: var(--spacing-md);
+}
+
+/* Section recherche de bureau */
+.office-finder {
+    background: var(--background-alt);
+    padding: var(--spacing-xl);
+    border-radius: 8px;
+    margin-bottom: var(--spacing-xl);
+}
+
+.search-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.search-box {
+    position: relative;
+    margin-bottom: var(--spacing-md);
+}
+
+.search-box input {
+    width: 100%;
+    padding: var(--spacing-md);
+    padding-right: 50px;
+    border: 2px solid var(--primary);
+    border-radius: 4px;
+    font-size: 1.1rem;
+}
+
+.btn-search {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    padding: var(--spacing-sm);
+    cursor: pointer;
+    color: var(--primary);
+}
+
+.search-filters {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+.filter-option {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    cursor: pointer;
+}
+
+/* Résultats de recherche */
+.office-card {
+    background: white;
+    border-radius: 8px;
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.office-card:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.office-basic-info h3 {
+    color: var(--primary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.services-tags {
+    display: flex;
+    gap: var(--spacing-xs);
+    margin: var(--spacing-sm) 0;
+}
+
+.service-tag {
+    background: var(--primary);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.office-details {
+    display: none;
+    margin-top: var(--spacing-md);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--background-alt);
+}
+
+.office-card.expanded .office-details {
+    display: block;
+}
+
+.hours-grid {
+    display: grid;
+    gap: var(--spacing-xs);
+}
+
+.hours-row {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: var(--spacing-md);
+}
+
+.toggle-details {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: var(--spacing-sm);
+    background: none;
+    border: none;
+    color: var(--primary);
+    cursor: pointer;
+    margin-top: var(--spacing-sm);
+}
+
+/* Grille de contact */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-xl);
+}
+
+/* Formulaire de contact */
+.contact-form {
+    display: grid;
+    gap: var(--spacing-md);
+}
+
+.form-group {
+    display: grid;
+    gap: var(--spacing-xs);
+}
+
+.form-group label {
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: var(--spacing-sm);
+    border: 1px solid var(--text-light);
+    border-radius: 4px;
+    width: 100%;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.consent-checkbox {
+    display: flex;
+    gap: var(--spacing-xs);
+    align-items: start;
+}
+
+.consent-checkbox input {
+    margin-top: 5px;
+}
+
+/* Information de contact */
+.contact-info {
+    background: var(--background-alt);
+    padding: var(--spacing-lg);
+    border-radius: 8px;
+}
+
+.contact-method {
+    margin-bottom: var(--spacing-lg);
+}
+
+.contact-method h3 {
+    color: var(--primary);
+    margin-bottom: var(--spacing-xs);
+}
+
+/* États de recherche */
+.loading,
+.error,
+.no-results {
+    text-align: center;
+    padding: var(--spacing-lg);
+}
+
+.error {
+    color: var(--danger-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .search-filters {
+        flex-direction: column;
+    }
+
+    .hours-row {
+        grid-template-columns: 80px 1fr;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.office-card {
+    animation: fadeIn 0.3s ease-out;
+}
