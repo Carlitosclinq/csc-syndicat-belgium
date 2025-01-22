@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contactez la CSC Belgique - Trouvez votre bureau local">
+    <title>Contact - CSC Belgique</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+    <header class="main-header">
+        <!-- Le même header que index.html -->
+    </header>
+
+    <main class="contact-page">
+        <div class="container">
+            <section class="contact-hero">
+                <h1>Contact et Assistance</h1>
+                <p>Nous sommes là pour vous aider. Trouvez le bureau le plus proche ou contactez-nous directement.</p>
+            </section>
+
+            <section class="office-finder">
+                <h2>Trouvez votre bureau local</h2>
+                <div class="search-container">
+                    <div class="search-box">
+                        <input 
+                            type="text" 
+                            id="location-search" 
+                            placeholder="Entrez votre code postal ou ville"
+                            aria-label="Rechercher un bureau"
+                            autocomplete="off">
+                        <button class="btn-search" aria-label="Rechercher">
+                            <span class="icon-search"></span>
+                        </button>
+                    </div>
+                    <div class="search-filters">
+                        <label class="filter-option">
+                            <input type="checkbox" value="chomage">
+                            Service chômage
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" value="juridique">
+                            Service juridique
+                        </label>
+                    </div>
+                </div>
+                <div id="search-results" class="results-container">
+                    <!-- Résultats de recherche dynamiques -->
+                </div>
+            </section>
+
+            <section class="contact-grid">
+                <div class="contact-form-container">
+                    <h2>Envoyez-nous un message</h2>
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nom complet</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Adresse e-mail</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Téléphone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Sujet</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Sélectionnez un sujet</option>
+                                <option value="affiliation">Affiliation</option>
+                                <option value="chomage">Chômage</option>
+                                <option value="juridique">Question juridique</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <div class="form-group consent-checkbox">
+                            <label>
+                                <input type="checkbox" required>
+                                J'accepte le traitement de mes données personnelles
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Envoyer le message</button>
+                    </form>
+                </div>
+
+                <div class="contact-info">
+                    <h2>Autres moyens de contact</h2>
+                    <div class="contact-method">
+                        <h3>Urgences</h3>
+                        <p>Numéro gratuit: <strong>0800 XX XXX</strong></p>
+                        <p>Lundi au vendredi, 8h30 - 17h00</p>
+                    </div>
+                    <div class="contact-method">
+                        <h3>E-mail général</h3>
+                        <p>info@csc.be</p>
+                    </div>
+                    <div class="contact-method">
+                        <h3>Siège principal</h3>
+                        <address>
+                            CSC Belgique<br>
+                            Rue Example 123<br>
+                            1000 Bruxelles
+                        </address>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <!-- Le même footer que index.html -->
+    </footer>
+
+    <script src="js/contact.js"></script>
+</body>
+</html>
